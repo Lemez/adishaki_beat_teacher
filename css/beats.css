@@ -13,8 +13,7 @@ Beat and Metronome Counter: Digital-7, Regular, 30 pt*/
 
 html{
 	font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
-	font-variant: small-caps;
-	font-size: 14pt;
+	font-variant: small-caps;	
 	text-decoration: none;
 
 }
@@ -26,6 +25,7 @@ body {
 	background-image: url('../img/texture.jpg');
 	position: fixed;
 	text-decoration: none;
+	font-size: 1em;
 
 
 }
@@ -56,7 +56,7 @@ nav p, nav a  {
 	text-decoration: none;
 	letter-spacing: 2px;
 
-	margin-left: 4%;
+	margin-left: 2%;
 
 }
 
@@ -67,7 +67,7 @@ nav #controls {
 
 	width: 100%;
 	float: right;
-	font-size: 18pt;
+	font-size: 1.2em;
 
 	vertical-align: baseline;
 	display: inline;
@@ -87,7 +87,7 @@ nav ul:before{
 nav ul li {display: none;
 background-color: #87184b;
 line-height: 1.5em;
-font-size: 14pt;
+font-size: 0.8em;
 margin: 0 2px 0 2px;
 padding: .2em 2em;
 text-align: center;
@@ -101,14 +101,34 @@ nav ul:hover li{display: block;}
 nav li:hover { text-decoration: underline; }
 
 
-nav input, #counter, #count, label, h3, #beat_select, #play, #metronome_symbol, #credits {
+nav input, #counter, #count, label, h3, #beat_select, #play, #metronome_symbol, #credits, #checkbox {
 	float: right;
 	margin-right: 3%;
 }
 
-#counter {
+#beat_select {
+	margin-right: 1%;	
+}
+
+#counter{
 	margin-right: 0;
 }
+
+#checkbox {
+	margin-right: 1%;
+}
+
+#mizhavu {
+	margin-right: 0;
+	margin-top: 4px;
+}
+
+#metro {
+	margin-top: 6px;
+	margin-right: 6px;
+}
+
+
 
 #tempo_value {
 	margin-right: 0;
@@ -135,11 +155,11 @@ nav input, #counter, #count, label, h3, #beat_select, #play, #metronome_symbol, 
 }
 
 #count, #tempo_value{
-	margin-top: -1.2%;
+	margin-top: -1%;
 }
 nav img {
 	margin-top: -2%;
-	width: 70px;
+	width: 2%;
 	float: right;
 	text-align: baseline;
 }
@@ -245,7 +265,7 @@ nav span#metronome_symbol {
 nav #tempo_value, nav #count {
 	font-family: 'Digital7';
 	font-weight: 700;
-	font-size: 50pt;
+	font-size: 3em;
 }
 
 nav #tempo_value {
@@ -257,14 +277,15 @@ nav #tempo_value {
 	width: 100%;
 	text-align: center;
 	z-index: -1;
-	margin-top: -5%;
-	font-size: 40px;
+	margin-top: -10%;
+	font-size: 2.5em;
 	position: absolute;
 	color: white;
+	opacity: 0.1;
 }
 
 h1 {
-	font-size: 100px;
+	font-size: 4em;
 	width: 100%;
 	text-align: center;
 	z-index: -10;
@@ -283,7 +304,6 @@ section {
 
 #drum_section {
 	z-index: -10;
-
 }
 
 #text_section {
@@ -294,42 +314,61 @@ section {
 	text-align: center;
 	width: 100%;
 	height: 100%;
-	margin-left: 15%;
+	margin-left: 12%;
 }
 
 
-.left, #text_left {
+.left, #text_left, .right, #text_right {
 	float: left;
-	width: 40%;
-	height: 80%;
+	width: 35%;
+	height: 70%;
+	margin-top: -2em;
 }
 
-.right, #text_right {
-	float: left;
-	width: 40%;
-	height: 80%;
-}
 
 .textbig {
-	font-size: 300px;
-	padding-top: 10%;
-	margin-left: -2%;
+	font-size: 10em;
+	padding-top: 35%;
+	margin-left: 1%;
 }
 
 .textsmall {
-	font-size: 100px;
-	padding-top: 15%;
-	margin-left: -2%;
+	font-size: 5em;
+	padding-top: 25%;
+	margin-left: 1%;
 }
 
-#drums_left { 
-background-image: url('../img/DrumHead.gif');
-background-repeat: no-repeat;
+#credit_section {
+	display: none;
+	z-index: -4;
+	width: 90%;
+	margin-left: 5%;
+	font-size: 1.7em;
+	background-color: white;
+	opacity: .9;
+	padding: 2px 4px 2px 4px;
+	text-align: center;
 
- }
-#drums_right { background-image: url('../img/DrumHead.gif');
-background-repeat: no-repeat;
- }
+}
+
+#close_credits {
+	float: right;
+	margin-right: 2px;
+	margin-top: 2px;
+	padding-left: 10px;
+
+}
+
+#credits_by_name{
+}
+
+#drums_left { background-image: url('../img/DrumHead.gif');}
+#drums_right { background-image: url('../img/DrumHead.gif');}
+
+#drums_left, #drums_right{ 
+	background-repeat: no-repeat;
+	background-size: 30em auto;
+}
 
 
 
@@ -337,24 +376,27 @@ footer {
 	width: 100%;
 	text-decoration: none;
 	color: white;
-	position: absolute;
-
-	font-size: 10px;
-	height: 20px;
-	margin-top: 30%;
+	position: fixed;
+	top: 90%;
+	font-size: .6em;
+	height: 2em;
 	margin-left: 2%;
 	
 }
 
-footer p {
+footer div {
 	float: left;
-	color: white;
+	color: darkgray;
+	font-variant: normal;
 	text-decoration: none;
-	margin-right: 2%;
+	margin-left: 2%;
+	margin-top: 4%;
+
 }
 
 
 footer a {
+	color: white;
 	text-decoration: none;
 }
 

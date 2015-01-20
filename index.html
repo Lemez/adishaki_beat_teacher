@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<!-- start Mixpanel --><!-- end Mixpanel -->
+	<head>
+
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="css/reset.css" />
+		<link type="stylesheet" href="css/csshake.css"/>
+
+<!-- 		<link rel="stylesheet" href="css/skeleton.css" /> -->
+		<link rel="stylesheet" href="css/beats.css" />
+
+		<!-- <link rel="stylesheet" type="text/css"
+		 	href="css/style_iphone.css" media="only screen and (max-width: 480px)" />
+		<link rel="stylesheet" type="text/css"
+		 	href="css/style_copy_desktop.css" media="screen and (min-width: 481px)" />	
+		<meta name="viewport" content="user-scalable=no, width=device-width" /> -->
+
+
+
+		
+		<link rel="shortcut icon" href="http://adishaktitheatrearts.com/wp-content/themes/jamsession/images/favicon.ico" type="image/x-icon">
+		<title>Learn South Indian Mizhavu Drums</title>
+		<meta name="description" content="Learn Mizhavu Drum Patterns with Adishakti">
+	
+		
+
+		<!-- /* Attach the Joyride CSS file */ -->
+		<!-- <link rel=" stylesheet" type="text/css" href="css/joyride-2.1.css"> -->
+
+	</head>
+
+	<body>
+
+		<header>			
+			<nav>
+				
+
+				<div id='controls'>
+						
+
+					<div id='credits'>CREDITS</div>
+					<div id='count'>0</div>
+					<div id='counter'> COUNT</div>
+
+					<span id='play' class='play'></span>
+
+					
+					<input id='tempo_value' value='60' />
+					
+					<input type='range' id='temposelect' min='30' max='120' value='60' step="1" onchange="outputUpdate(value);"/>
+
+				<!-- 	<label for='temposelect'>T-Img</label> -->
+<!-- 					<img src="img/metronome.gif" /> -->
+					
+					<input type="checkbox" name="mizhavu" value="metro" id="metro" checked/>
+					<span id='metronome_symbol'></span>
+
+					
+					
+					
+					<ul id='beat_select' aria-label="BEAT">
+
+						<li value="three" name="one">3 BEAT 1ST SPEED</li>
+						<li value="three" name="two">3 BEAT 2ND SPEED</li>
+						<li value="three" name="three">3 BEAT 3RD SPEED</li>
+						<li value="three" name="four">3 BEAT 4TH SPEED</li>
+						<li value="four" name="one">4 BEAT 1ST SPEED</li>
+						<li value="four" name="two">4 BEAT 2ND SPEED</li>
+						<li value="four" name="three">4 BEAT 3RD SPEED</li>
+						<li value="four" name="four">4 BEAT 4TH SPEED</li>
+						<li value="seven" name="one">7 BEAT 1ST SPEED</li>
+						<li value="seven" name="two">7 BEAT 2ND SPEED</li>
+						<li value="seven" name="three">7 BEAT 3RD SPEED</li>
+						<li value="seven" name="four">7 BEAT 4TH SPEED</li>
+						<li value="eight" name="one">8 BEAT 1ST SPEED</li>
+						<li value="eight" name="two">8 BEAT 2ND SPEED</li>
+						<li value="eight" name="three">8 BEAT 3RD SPEED</li>
+						<li value="eight" name="four">8 BEAT 4TH SPEED</li>
+						<li value="threehalf" name="one">3.5 BEAT</li>
+						<li value="five" name="one">5 BEAT</li>
+					</ul>
+
+					
+					<input id='mizhavu' type="checkbox" name="mizhavu" value="mizhavu"/>
+					<div id='checkbox'>Playalong</div>
+					
+					<p><a href="index.html">Adishakti Beats (beta)</a></p>
+			
+				</div>
+	
+					
+	
+			</nav>
+		</header>
+
+				
+				<div id='errors'></div>
+				</br>
+				<h1 id='current_beat'> </h1>				
+
+				<div id='sounds'>
+					<audio id="strong" src="sounds/m1.mp3" preload="auto"></audio>
+					<audio id="weak" src="sounds/m2.mp3" preload="auto"></audio>
+					<audio id="stressbeat" src="sounds/clave_high_mono_8.wav" preload="auto"></audio>
+					<audio id="regularbeat" src="sounds/clave_low_mono_8.wav" preload="auto"></audio>
+					
+				</div>
+		<section id="drum_section">
+			<div id="drum_panel">
+					<div id='drums_left' class='left'></div>
+					<div id='drums_right' class='right'></div>
+					<!-- <div id='LS' ></div>
+					<div id='LR' ></div>
+					<div id='RS' ></div>
+					<div id='RR' ></div> -->
+			</div>
+		</section>
+
+		<section id="text_section">
+			<div id="text_panel">
+				<div id='text_left' ></div>
+				<div id='text_right' ></div>
+			</div>
+		</section>
+
+		<section id="credit_section">
+			<div id='close_credits'>X</div>
+
+			<p>Adishakti Beats is an educational app for practising South Indian Mizhavu drumming patterns, designed as a practice tool for students who have completed our eleven-day Source of Performance Energy residential workshop. </br>To find out about our upcoming workshops, please visit <a href="http://adishaktitheatrearts.com/workshops/adishakti-workshop-for-actors/">Adishakti Laboratory for Theatre Arts Research</a></p>
+
+		</br>
+		<p>We would love to get your feedback on our application.</br> Please click <a href="mailto:bhavinadishakti@gmail.com"> here </a>now if you have any thoughts about how we could improve it.</br> We greatly appreciate your input.</p>
+	</br>
+		<div id="credits_by_name">
+		<p>Credits:</p>
+
+
+			<p>Conceptualised,designed and built by Jonathan Walton and Adishakti Laboratory for Theatre Arts Research</p>
+
+			
+			<p>Metronome Icon: Created by Philip Hogeboom, from the Noun Project</p>
+			<p>Pause and Stop Icons: Created by P.J. Onori, from the Noun Project</p>
+			<p>Drum Head Icons: Created by Kristin Hogan, from the Noun Project</p>
+		</div>
+
+
+		</section>
+
+			<footer>
+			
+			 <div>Created with love by
+					<a href="http://adishaktitheatrearts.com">Adishakti Laboratory for Theatre Arts Research</a>
+			  2015</div>
+
+
+		</footer>
+		
+
+	</body>
+	<script type='text/javascript' src='js/jquery-2.1.3.min.js'></script>
+
+	<script type='text/javascript' src='js/beats.js'></script>
+
+	<script> 
+	function outputUpdate(val) {$('#tempo_value').attr("value", val);}</script>
+	
+
+</html>
